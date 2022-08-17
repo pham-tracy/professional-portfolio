@@ -1,67 +1,143 @@
-
+/*
+* {
+    box-sizing: border-box;
+}
+*/
 
 body {
-    font-family: sans-serif, Helvetica, Georgia;
-    background-color:mistyrose;
-    margin:auto;
-
+  font-family: sans-serif, Helvetica, Georgia;
+  margin: auto;
 }
+
+/* background color and border bottom for header */
 
 header {
-    background-color:lavender;
-
+  background-color: lavender;
+  border-bottom: 5px blue solid;
 }
 
+/* Flexbox to evenly space nav bar items */
 nav {
-    display:flex;
-    justify-content: space-between;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px;
+  height: 100px;
+  font-size: 20px;
 }
 
+/* Makes right nav bar links flex and makes it appear from the right side of screen */
 nav ul {
-    display:flex;
-    justify-content: flex-end;
-    
-
-
+  display: flex;
+  justify-content: flex-end;
 }
+
+/* Margin spacing between li items on nav bar */
+
 nav li {
-    margin:10px;
+  margin: 40px;
 }
 
-
+/* Makes all links have no text-decoration */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
+/* Makes unordered list have no list style */
 ul {
-    list-style-type:none;
-
+  list-style-type: none;
 }
 
+/* When links are hovered, they are underlined and appear in blueviolet color */
 a:hover {
-    text-decoration: underline;
-}
-img {
-    width:20%;
-    height:30%;
-    display:inline;
-    margin: 15px;
-    border-radius: 15px;
+  text-decoration: underline;
+  color: blueviolet;
 }
 
-footer ul {
-    display:flex;
-    justify-content: space-evenly;
-    
+/* image properties to size, set inline and make it curve */
+.about img {
+  width: 20%;
+  height: 25%;
+  display: inline;
+  margin-right: 20px;
+  border-radius: 15px;
 }
 
+
+/* Makes image and about me section on same line */
 .about {
-    display:flex;
-    flex-direction: ;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  margin: 50px;
 }
+
+/* Makes margin the same as other sections */
+.work {
+  margin: 50px;
+  position: relative;
+}
+
+.project1 {
+  display: flex;
+  justify-content: center;
+}
+
+/* Style image for project 1 */
+#project1 img {
+  width: 100vh;
+  display: block;
+  margin: auto;
+  position:relative; 
+}
+
+#project1 div {
+    width:100%;display:flex;
+}
+
+#projects2-6 div {
+    width:100%;display:flex;
+}
+
+#projects2-6 img {
+  width: 50%;
+  margin:auto;
+
+}
+
+
+
+
+/* Style figcaption to be fixed on image and to have border and background  
+#project1 figcaption {
+  position: absolute;
+  top: 80px;
+  right: 100px;
+  font-size: 20px;
+  background: pink;
+  padding: 10px;
+  border: 2px purple solid;
+}
+
+#project2 figcaption {
+    position: absolute;
+    bottom:0px;
+    right: 100px;
+    font-size: 20px;
+    background: pink;
+    padding: 10px;
+    border: 2px purple solid;
+  }
+ */ 
+/* Makes contact footer margin same as other sections */
 
 .contact {
-    
+  display: flex;
+  margin: 0 50px;
+}
+
+.contact ul {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
