@@ -74,8 +74,8 @@ a:hover {
 /* Makes margin the same as other sections */
 .work {
   margin: 50px;
-  position: relative;
-
+  display:flex;
+  flex-direction: column;
 }
 
 .project1 {
@@ -85,17 +85,27 @@ a:hover {
 
 /* Style image for project 1 */
 #project1 img {
-  width: 100vh;
+  width: 70vh;
   display: block;
   margin: auto;
-  position:relative; 
+  position:relative;
+  border: 2px lightgrey dashed; 
+  
 }
 .project1 {
     width:100%;
  
 }
 
-/* Added 2 x 2 column */
+.projects2-5 {
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
 .projects2-5 {
   display: grid;
     width:100%;
@@ -103,12 +113,15 @@ a:hover {
     text-align: center;
     
 }
+*/
 
 /* changed size and margins for project 2-5 images */
 
 .projects2-5 img {
-  width: 45vh;
+  width: 40vh;
   margin: 40px;
+  border: 2px lightgrey dashed;
+
 
 }
 
