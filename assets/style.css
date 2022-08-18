@@ -75,6 +75,7 @@ a:hover {
 .work {
   margin: 50px;
   position: relative;
+
 }
 
 .project1 {
@@ -89,18 +90,25 @@ a:hover {
   margin: auto;
   position:relative; 
 }
-
-#project1 div {
-    width:100%;display:flex;
+.project1 {
+    width:100%;
+ 
 }
 
-#projects2-6 div {
-    width:100%;display:flex;
+/* Added 2 x 2 column */
+.projects2-5 {
+  display: grid;
+    width:100%;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    
 }
 
-#projects2-6 img {
-  width: 50%;
-  margin:auto;
+/* changed size and margins for project 2-5 images */
+
+.projects2-5 img {
+  width: 45vh;
+  margin: 40px;
 
 }
 
