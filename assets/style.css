@@ -1,3 +1,12 @@
+:root {
+
+--header-underline: 3px rgba(0, 0, 255, 0.623) solid;
+--image-border-radius: 15px;
+--link-color: rgb(17, 17, 216);
+--image-border:2px lightgrey dashed; 
+}
+
+
 /* Adds smooth scrolling when clicking on nav bar links */
 html {
   scroll-behavior: smooth;
@@ -15,7 +24,7 @@ body {
 /* Set background color and border bottom for header */
 header {
   background-image: linear-gradient(to top, #bd8eef 0%, #7ec4f9f1 100%);
-  border-bottom: 3px rgba(0, 0, 255, 0.623) solid;
+  border-bottom: var(--header-underline);
 }
 
 /* Creates flexbox to evenly space nav bar items and style the text */
@@ -40,10 +49,10 @@ nav li {
   margin: 40px;
 }
 
-/* Makes all links the color blue with  no text-decoration */
+/* Makes all links the color blue with no text-decoration */
 a {
   text-decoration: none;
-  color:rgb(17, 17, 216);
+  color: var(--link-color);
 }
 
 /* Makes unordered list have no list style */
@@ -61,7 +70,7 @@ a:hover {
 .about img {
   width: 350px;
   margin-right: 20px;
-  border-radius: 15px;
+  border-radius: var(--image-border-radius);
 }
 
 
@@ -74,7 +83,7 @@ a:hover {
   margin: 50px;
 }
 
-/* Creates flexbox container for project1 and adjusts the top margin */
+/* Creates flexbox container for project1 to make it responsive and adjusts the top margin */
 .work {
   margin-top: 50px;
   display:flex;
@@ -87,12 +96,12 @@ a:hover {
 /* Style image for project 1 with border and rounded edges */
 #project1 img {
   width: 800px;
-  border: 2px lightgrey dashed; 
-  border-radius: 15px;
+  border: var(--image-border);
+  border-radius: var(--image-border-radius);
 
 }
 
-/* Creates flexbox for smaller projects 2-5 */
+/* Creates flexbox for smaller projects 2-5 to make the page responsive */
 .projects2-5 {
   display:flex;
   flex-direction: row;
@@ -106,10 +115,6 @@ a:hover {
   bottom:90%;
   left:35%;
   width:30%;
-  background-color:#CCCCFF;
-  border: 2px white solid;
-  padding:5px;
-  border-radius: 5px;
 }
 
 /* Style remaining figcaptions for Projects 2-5 so that it's centered at the bottom */
@@ -118,9 +123,9 @@ figcaption {
   bottom: 65px;
   left:170px;
   width:35%;
-  background-color:#CCCCFF;
-  border: 2px white solid;
-  padding:5px;
+  background-color: #CCCCFF;
+  border:2px white solid;
+  padding: 5px;
   border-radius: 5px;
   text-align: center;
 
@@ -130,21 +135,19 @@ figcaption {
 .projects2-5 img {
   width: 500px;
   margin: 10px 30px;
-  border: 2px lightgrey dashed;
-  border-radius: 15px;
+  border: var(--image-border);
+  border-radius: var(--image-border-radius);
 
 }
-/* Sets all H2 in About section to have a border-bottom line of blue and increased font size*/
-.about h2 {
-  border-bottom: 3px rgba(0, 0, 255, 0.623) solid;
-  font-size:28px;
+/* Sets all H2 to have a border-bottom line of blue and increased font size*/
+.about h2, .heading {
+  border-bottom: var(--header-underline);
+  font-size:28px
 }
 
-/* Sets all H2 headings in work section to have a border-bottom line of blue, increases margins and adjusts margins */
+/* Sets all H2 headings in work section to adjust margins to align with the rest of the page */
 .heading {
   margin: 0 50px;
-  border-bottom: 3px rgba(0, 0, 255, 0.623) solid;
-  font-size:28px;
 }
 
 /* Sets unordered list in contact section to be flex */
@@ -158,7 +161,7 @@ figcaption {
 
 /* Make link color remain the same even after visiting the link */
 .contact a:visited {
-  color: rgb(17, 17, 216);
+  color: var(--link-color);
 }
 
 /* When images with the class of work are hovered over, a blue solid border appears */
