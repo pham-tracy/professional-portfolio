@@ -9,6 +9,7 @@ body {
   font-family:  Helvetica, sans-serif, Georgia;
   margin: auto;
   background: radial-gradient(circle, rgb(234, 162, 194) 0%, rgba(148,187,233,1) 100%);
+
 }
 
 /* Set background color and border bottom for header */
@@ -58,7 +59,7 @@ a:hover {
 
 /* Set profile image properties in About Me section */
 .about img {
-  width: 30vh;
+  width: 350px;
   margin-right: 20px;
   border-radius: 15px;
 }
@@ -68,6 +69,8 @@ a:hover {
 .about {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap:wrap;
   margin: 50px;
 }
 
@@ -162,7 +165,3 @@ figcaption {
 #work img:hover {
   border:5px rgba(0, 0, 255, 0.623) solid;
 }
-
-
-
-/* TO DO: ADD MEDIA QUERIES * try to fix positionign of label and why the first image resizes */
