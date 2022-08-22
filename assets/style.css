@@ -1,5 +1,5 @@
+/* CSS variables for values that are repeated throughout the code */
 :root {
-
 --header-underline: 3px rgba(0, 0, 255, 0.623) solid;
 --image-border-radius: 15px;
 --link-color: rgb(17, 17, 216);
@@ -15,7 +15,7 @@ html {
 
 /* Set font-family, margins, background color of body */
 body {
-  font-family:  Helvetica, sans-serif, Georgia;
+  font-family:  'Lucida Sans', Arial, sans-serif ,sans-serif, Georgia;
   margin: auto;
   background: radial-gradient(circle, rgb(234, 162, 194) 0%, rgba(148,187,233,1) 100%);
 
@@ -35,10 +35,14 @@ nav {
   margin: 0 50px;
   height: 100px;
   font-size: 22px;
-  
 }
 
-/* Makes right nav bar links flex and so that it appears from the right side of screen */
+/* Makes unordered list have no list style */
+ul {
+  list-style-type: none;
+}
+
+/* Makes nav bar links flex so that it appears from the right side of screen */
 nav ul {
   display: flex;
   justify-content: flex-end;
@@ -55,69 +59,18 @@ a {
   color: var(--link-color);
 }
 
-/* Makes unordered list have no list style */
-ul {
-  list-style-type: none;
-}
-
 /* When links are hovered over, they are underlined and enlarged */
 a:hover {
   text-decoration: underline;
   font-size: 26px;
 }
 
-/* Set profile image properties in About Me section */
-.about img {
-  width: 350px;
-  margin-right: 20px;
-  border-radius: var(--image-border-radius);
+/* Makes link color remain the same even after visiting the link */
+a:visited {
+  color: var(--link-color);
 }
 
-
-/* Makes profile image and about me section on the same block */
-.about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap:wrap;
-  margin: 50px;
-}
-
-/* Creates flexbox container for project1 to make it responsive and adjusts the top margin */
-.work {
-  margin-top: 50px;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-
-/* Style image for project 1 with border and rounded edges */
-#project1 img {
-  width: 800px;
-  border: var(--image-border);
-  border-radius: var(--image-border-radius);
-
-}
-
-/* Creates flexbox for smaller projects 2-5 to make the page responsive */
-.projects2-5 {
-  display:flex;
-  flex-direction: row;
-  flex-wrap:wrap;
-  justify-content: center;
-}
-
-/* Style figcaption for Project 1 so that it's centered at top */
-#project1caption {
-  position:relative;
-  bottom:90%;
-  left:35%;
-  width:30%;
-}
-
-/* Style remaining figcaptions for Projects 2-5 so that it's centered at the bottom */
+/* Style figcaptions for Projects 2-5 so that it's centered at the bottom */
 figcaption {
   position: relative;
   bottom: 65px;
@@ -128,7 +81,65 @@ figcaption {
   padding: 5px;
   border-radius: 5px;
   text-align: center;
+}
 
+/* Set profile image properties in About section */
+.about img {
+  width: 350px;
+  margin-right: 20px;
+  border-radius: var(--image-border-radius);
+}
+
+/* Makes profile image and about me section responsive to adapt to various viewports */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap:wrap;
+  margin: 50px;
+}
+
+/* Sets all H2 to have a border-bottom line of blue and increased font size*/
+.about h2, .heading {
+  border-bottom: var(--header-underline);
+  font-size:28px;
+}
+
+/* Sets all H2 headings in work section to adjust margins to align with the rest of the page */
+.heading {
+  margin: 0 50px;
+}
+
+/* Creates flexbox container for project1 to make it responsive and adjusts the top margin */
+.work {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+/* Style image for project 1 with border and rounded edges */
+#project1 img {
+  width: 700px;
+  border: var(--image-border);
+  border-radius: var(--image-border-radius);
+}
+
+/* Style figcaption for Project 1 so that it's centered at top */
+#project1caption {
+  position:relative;
+  bottom:90%;
+  left:35%;
+  width:30%;
+}
+
+/* Creates flexbox for smaller projects 2-5 to make the page responsive */
+.projects2-5 {
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
 }
 
 /* Adjusts size and margins for project 2-5 images and adds rounded dashed border */
@@ -137,17 +148,6 @@ figcaption {
   margin: 10px 30px;
   border: var(--image-border);
   border-radius: var(--image-border-radius);
-
-}
-/* Sets all H2 to have a border-bottom line of blue and increased font size*/
-.about h2, .heading {
-  border-bottom: var(--header-underline);
-  font-size:28px
-}
-
-/* Sets all H2 headings in work section to adjust margins to align with the rest of the page */
-.heading {
-  margin: 0 50px;
 }
 
 /* Sets unordered list in contact section to be flex */
@@ -159,12 +159,22 @@ figcaption {
   font-size:20px;
 }
 
-/* Make link color remain the same even after visiting the link */
-.contact a:visited {
-  color: var(--link-color);
-}
-
-/* When images with the class of work are hovered over, a blue solid border appears */
+/* When project images are hovered over, a blue solid border appears */
 #work img:hover {
   border:5px rgba(0, 0, 255, 0.623) solid;
 }
+
+/* When screen width is less than 768px, the nav bar appears as a column. This also resizes the project 1 image. This is to make the page responsive on various screen sizes */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    position:relative;
+    height:100%;
+    padding:0;
+  }
+
+  #project1 img {
+    width:600px;
+  }
+}
+ 

@@ -8,6 +8,7 @@
 
   <body>
     <header>
+      <!-- Navigation bar with my name and links that scrolls to corresponding sections of webpage  -->
       <nav>
         <h1>Tracy Pham</h1>
         <ul>
@@ -19,6 +20,7 @@
     </header>
 
     <main>
+      <!-- About me section with photo -->
       <section class="about">
         <img
           src="./assets/images/IMG_2292.JPG"
@@ -30,9 +32,8 @@
           <p>
             I am an aspiring Web Developer from Seattle, Washington. Born and
             and raised here, I graduated from the University of Washington with
-            a BA in Public Health. Now, I am currently pursuing a Web
-            Development certificate from the University of Washington Coding
-            Boot Camp.
+            a BA in Public Health. Currently, I am pursuing a Web Development
+            certificate from the University of Washington Coding Boot Camp.
 
             <br />
             <br />
@@ -44,8 +45,11 @@
         </article>
       </section>
 
+      <!-- Section to display all 5 projects -->
       <section id="work">
         <h2 class="heading">Work</h2>
+
+        <!-- Section to display first project with titled caption in flexbox -->
         <section class="work">
           <article id="project1">
             <a href="https://pham-tracy.github.io/prework-study-guide/">
@@ -54,6 +58,8 @@
             <figcaption id="project1caption">Prework Study Guide</figcaption>
           </article>
         </section>
+
+        <!-- Section to display projects 2 to 5 with titled captions in flexbox -->
         <section class="projects2-5">
           <article id="project2">
             <a href="https://pham-tracy.github.io/horiseon-code-refactor/">
@@ -66,8 +72,13 @@
           </article>
 
           <article id="project3">
-            <a href="https://pham-tracy.github.io/01-mini-project-landing-page/">
-              <img src="./assets/images/clouds.jpg" alt="clouds in a purple sky" />
+            <a
+              href="https://pham-tracy.github.io/01-mini-project-landing-page/"
+            >
+              <img
+                src="./assets/images/clouds.jpg"
+                alt="clouds in a purple sky"
+              />
             </a>
             <figcaption>Contact Form</figcaption>
           </article>
@@ -79,6 +90,7 @@
             <figcaption>CSS Snippets</figcaption>
           </article>
 
+          <!-- Placeholder for project 5. This links to my GitHub profile -->
           <article id="project5">
             <a href="https://github.com/pham-tracy">
               <img src="./assets/images/sunlight.jpg" alt="orange circles" />
@@ -88,27 +100,23 @@
         </section>
       </section>
 
-        <section class="contact">
-          <h2 class="heading">Contact</h2>
-          <article id="contact">
-            <ul>
-              <li>
-                <a href="tel:206-405-0300">Call</a>
-              </li>
-              <li>
-                <a href="mailto: phamtracy95@gmail.com" target="_blank"
-                  >Email</a
-                >
-              </li>
-              <li>
-                <a href="https://github.com/pham-tracy" target="_blank"
-                  >GitHub</a>
-              </li>
-            </ul>
-          </article>
-        </section>
+      <!-- Contact section with links that will directly call or email me when clicked. Also includes link to my GitHub -->
+      <section class="contact">
+        <h2 class="heading">Contact</h2>
+        <article id="contact">
+          <ul>
+            <li>
+              <a href="tel:206-405-0300">Call</a>
+            </li>
+            <li>
+              <a href="mailto: phamtracy95@gmail.com">Email</a>
+            </li>
+            <li>
+              <a href="https://github.com/pham-tracy" target="_blank">GitHub</a>
+            </li>
+          </ul>
+        </article>
       </section>
     </main>
-
   </body>
 </html>
