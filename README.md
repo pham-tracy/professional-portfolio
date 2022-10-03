@@ -12,8 +12,6 @@ N/A
 
 ## Usage
 
-<!-- TO DO: Edit project website -->
-
 Visit the project website here: https://pham-tracy.github.io/professional-portfolio/.
 
 ![Professional Portfolio Screenshot](assets/images/professional_portfolio_screenshot.png)
