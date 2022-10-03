@@ -14,7 +14,7 @@ N/A
 
 Visit the project website here: https://pham-tracy.github.io/professional-portfolio/.
 
-![Professional Portfolio Screenshot](assets/images/professional_portfolio_screenshot.png)
+![Professional Portfolio Screenshot](assets/images/Portfolio%20screenshot.png)
 
 This webpage is responsive so its appearance may change on various screen widths and devices.
 
